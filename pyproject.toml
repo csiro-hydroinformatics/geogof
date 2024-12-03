@@ -28,7 +28,13 @@ classifiers = [
     "Topic :: Utilities",
     "Typing :: Typed",
 ]
-dependencies = []
+
+dependencies = [
+    "geopandas",
+    "geoplot",
+    "matplotlib",
+    # "pysal", # maybe, but problematic to install
+]
 
 [project.urls]
 Homepage = "https://csiro-hydroinformatics.github.io/geogof"
