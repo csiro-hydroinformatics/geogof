@@ -23,7 +23,7 @@ class PointData:
     """Class for handling point data."""
 
     def __init__(
-        self, data: pd.DataFrame | xr.DataArray, lat_name: str = "lat", lon_name: str = "lon", obj_name: str = "obj"
+        self, data: pd.DataFrame | xr.DataArray, lat_name: str = "lat", lon_name: str = "lon", obj_name: str = "obj",
     ) -> None:
         """Initialize the class.
 
