@@ -1,0 +1,20 @@
+# Changes here will be overwritten by Copier
+_commit: 1.5.4
+_src_path: https://github.com/pawamoy/copier-uv.git
+author_email: jean-michel.perraud@csiro.au
+author_fullname: J-M
+author_username: jmp75
+copyright_date: '2024'
+copyright_holder: CSIRO
+copyright_holder_email: jean-michel.perraud@csiro.au
+copyright_license: BSD 3-Clause "New" or "Revised" License
+insiders: false
+project_description: Geographic visualisations for models' goodness of fit
+project_name: geogof
+python_package_command_line_name: geogof
+python_package_distribution_name: geogof
+python_package_import_name: geogof
+repository_name: geogof
+repository_namespace: csiro-hydroinformatics
+repository_provider: github.com
+
