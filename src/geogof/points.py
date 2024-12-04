@@ -12,6 +12,7 @@ import geoplot.crs as gcrs
 import pandas as pd
 import xarray as xr
 from cartopy.mpl.geoaxes import GeoAxes
+from ipyleaflet import GeoData
 
 # import matplotlib.pyplot as plt
 from matplotlib.axes import Axes
@@ -52,5 +53,17 @@ class PointData:
     def pointplot(self, outline_shape: gpd.GeoDataFrame | None, projection: Any = None) -> tuple[Axes, GeoAxes]:
         """Plot the point data."""
         projection = projection or gcrs.LambertAzimuthalEqualArea()
-        ax = gplt.polyplot(outline_shape, projection=projection)
+        ax = None if outline_shape is None else gplt.polyplot(outline_shape, projection=projection)
         return gplt.pointplot(self._gof_dataframe, hue=self._obj_name, ax=ax, legend=True)
+
+    def ipyleaflet_geodata_layer(self) -> GeoData:
+        """Create a GeoData layer for use in ipyleaflet maps."""
+        # https://ipyleaflet.readthedocs.io/en/latest/layers/geodata.html
+
+        gdf = self._gof_dataframe
+
+        return GeoData(geo_dataframe = gdf,
+            style={"color": "black", "radius":8, "fillColor": "#3366cc", "opacity":0.5, "weight":1.9, "dashArray":"2", "fillOpacity":0.6},
+            hover_style={"fillColor": "red" , "fillOpacity": 0.2},
+            point_style={"radius": 5, "color": "red", "fillOpacity": 0.8, "fillColor": "blue", "weight": 3},
+            name = "Release")

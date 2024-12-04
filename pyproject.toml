@@ -35,6 +35,8 @@ dependencies = [
     "matplotlib",
     "xarray",
     "netcdf4",
+    "ipyleaflet",
+    "ipywidgets<=8.0.0",
     # "pysal", # maybe, but problematic to install
 ]
 
