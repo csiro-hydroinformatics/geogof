@@ -70,7 +70,11 @@ jobs:
         # - "3.14"
         resolution:
         - highest
-        - lowest-direct
+        # lowest possible versions for each packages.
+        # It was a bit of a mystery to me what this github option
+        # but this seems to be about UV:
+        # https://docs.astral.sh/uv/concepts/resolution/#lower-bounds
+        # - lowest-direct
         # exclude:
         # - os: macos-latest
         #   resolution: lowest-direct
