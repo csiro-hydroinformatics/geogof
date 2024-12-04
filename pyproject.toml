@@ -33,6 +33,8 @@ dependencies = [
     "geopandas",
     "geoplot",
     "matplotlib",
+    "xarray",
+    "netcdf4",
     # "pysal", # maybe, but problematic to install
 ]
 
