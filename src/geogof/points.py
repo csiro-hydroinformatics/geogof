@@ -49,7 +49,7 @@ class PointData:
         gdf = data.to_dataframe().reset_index() if isinstance(data, xr.DataArray) else data.copy()
 
         for x in (lat_name, lon_name, obj_name):
-            if x not in self._gof_dataframe.columns:
+            if x not in gdf.columns:
                 raise ValueError(f"Column {x} not found in the DataFrame")
         self._lat_name = lat_name
         self._lon_name = lon_name
@@ -78,7 +78,7 @@ class PointData:
 
     def ipyleaflet_geodata_layer(self) -> GeoData:
         """Create a GeoData layer for use in ipyleaflet maps with color based on obj_value."""
-        gdf = self._gof_dataframe
+        gdf = self._gdf
 
         # Create a color map
         objvals = gdf[self._obj_name]
