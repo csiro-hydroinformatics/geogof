@@ -30,9 +30,9 @@ class PointData:
         lat_name: str = "lat",
         lon_name: str = "lon",
         obj_name: str = "obj",
-        lower_clip: float|None = None,
-        upper_clip: float|None = None,
-        fill_na_value: float=0,
+        lower_clip: float | None = None,
+        upper_clip: float | None = None,
+        fill_na_value: float = 0,
     ) -> None:
         """Initialize the class.
 

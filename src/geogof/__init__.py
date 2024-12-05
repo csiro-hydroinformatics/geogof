@@ -4,6 +4,6 @@ Geographic visualisations for models' goodness of fit
 """
 
 # from __future__ import annotations
-from . import points
+from geogof import points
 
 __all__: list[str] = ["points"]
